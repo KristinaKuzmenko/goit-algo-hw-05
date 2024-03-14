@@ -121,8 +121,8 @@ def rabin_karp_search(main_string, substring):
 # Пошук речень у статтях
 with open("стаття 1.txt", "r") as f:
     text1 = f.read()
-    pattern_r1 = "Двійковий або логарифмічний пошук часто використовується через швидкий час пошуку."
-    pattern_m1 = "Зв’язний список (linked list) – це структура даних, у якій кожен елемент має вказівник на наступний елемент."
+pattern_r1 = "Двійковий або логарифмічний пошук часто використовується через швидкий час пошуку."
+pattern_m1 = "Зв’язний список (linked list) – це структура даних, у якій кожен елемент має вказівник на наступний елемент."
 
 t_kmp_1r = timeit.timeit(lambda: kmp_search(text1, pattern_r1), number=30)
 t_kmp_1m = timeit.timeit(lambda: kmp_search(text1, pattern_m1), number=30)
@@ -133,7 +133,7 @@ t_rabin_karp_1m = timeit.timeit(lambda: rabin_karp_search(text1, pattern_m1), nu
 
 with open("стаття 2.txt", "r") as f:
     text2 = f.read()
-    pattern_r2, pattern_m2 = pattern_m1, pattern_r1
+pattern_r2, pattern_m2 = pattern_m1, pattern_r1
 
 t_kmp_2r = timeit.timeit(lambda: kmp_search(text2, pattern_r2), number=30)
 t_kmp_2m = timeit.timeit(lambda: kmp_search(text2, pattern_m2), number=30)

@@ -11,9 +11,11 @@ def binary_search(arr, x):
         mid = (high + low) // 2
         iter_count += 1
 
-        if arr[mid] < x:
+        if arr[mid] == x:
+            return iter_count, arr[mid]
+
+        elif arr[mid] < x:
             low = mid + 1
-        # якщо x менше за значення посередині списку, ігноруємо праву половину, але не виключаємо середній елемент, оскільки він иоже бути верхньою межею
         else:
             high = mid
 
